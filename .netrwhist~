@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/jiakai/.vim'
+let g:netrw_dirhist_7='/Users/jiakai/.vim/plugged'
+let g:netrw_dirhist_6='/Users/jiakai/.vim'
+let g:netrw_dirhist_5='/Users/jiakai/.vim/bundle'
+let g:netrw_dirhist_4='/Users/jiakai/.vim/bundle/ultisnips'
+let g:netrw_dirhist_3='/Users/jiakai/.vim/bundle/ultisnips/autoload'
+let g:netrw_dirhist_2='/Users/jiakai/.vim/bundle/ultisnips/autoload/UltiSnips'
+let g:netrw_dirhist_1='/Users/jiakai/.vim/bundle/ultisnips/autoload'
+let g:netrw_dirhist_0='/Users/jiakai/.vim/bundle/ultisnips'
+let g:netrw_dirhist_9='/Users/jiakai/.vim/bundle'
