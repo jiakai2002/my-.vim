@@ -1,39 +1,55 @@
 snippet beg "template"
 #include <bits/stdc++.h>
-using namespace std;
-
+#define ld long double
 #define ll long long
+#define fi first
+#define se second
 #define ar array
+using namespace std;
 
 void solve() {
 	$0
 }
 
-
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	int t;
-	cin >> t;
-	while (t--)
+	int T;
+	cin>>T;
+	while (T--)
 		solve();
+	return 0;
 }
-
 endsnippet 
 
-snippet begm "minimalist begin"
+snippet begs "single test case"
 #include <bits/stdc++.h>
+#define ld long double
+#define ll long long
+#define fi first
+#define se second
+#define ar array
 using namespace std;
 
-#define ll long long
-#define ar array
-
-int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	
+void solve() {
 	$0
 }
 
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int T=1;
+	while (T--)
+		solve();
+	return 0;
+}
+
 endsnippet 
+
+snippet for
+for (int ${1:i}=0; $1<${2:n}; $1++)${3}
+endsnippet
+
+

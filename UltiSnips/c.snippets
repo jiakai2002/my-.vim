@@ -1,0 +1,143 @@
+snippet for
+for (int ${1:i}=0; $1<${2:n}; $1++) {
+	${3}
+}
+endsnippet
+
+snippet rfor
+for (int ${1:i}=n-1; $1>=0; $1++) {
+	${3}
+}
+endsnippet
+
+snippet swap
+void swap(int* a, int* b) {
+	int t = *a;
+	*a = *b;
+	*b = t;
+}
+endsnippet
+
+snippet prime "classic prime test"
+int is_prime(int n) {
+	if (n==2 || n==3)
+		return 1;
+	if (n <= 1 || n%2==0 || n%3==0)
+		return 0;
+	for (int i=5; i*i <= n; i+=6) {
+		if (n%i == 0 || n%(i+2) == 0)
+			return 0;
+	}
+	return 1;
+}
+endsnippet
+
+snippet gcd "Euclid's"
+int gcd(a, b) {
+	if (b == 0)
+		return a;
+	else
+		gcd(b, a%b);
+}
+endsnippet
+
+snippet qsort
+int comp (const void * a, const void * b) {
+	int *x = (int*)a;
+	int *y = (int*)b;
+	return (*x - *y);	
+	//return (*y - *x); //for reverse order
+}
+qsort (arr, sizeof(arr)/sizeof(*arr), sizeof(*arr), comp);
+endsnippet
+
+snippet gmin
+int get_min(int arr[], int n) {
+	int min = INT_MAX;
+	for (int i=0; i<n; i++) {
+		if (arr[i] < min)
+			min = arr[i];
+	}
+	return min;
+}
+endsnippet
+
+snippet gmax
+int get_max(int arr[], int n) {
+	int max = INT_MIN;
+	for (int i=0; i<n; i++) {
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	return max;
+}
+endsnippet
+
+snippet minmax
+int min(int a, int b) {
+	return (a<b)?a:b;
+}
+int max(int a, int b) {
+	return (a>b)?a:b;
+}
+endsnippet
+
+snippet 2dmalloc
+int** res = malloc(m*sizeof(int*));
+for (int i=0; i<m; i++)
+	res[i] = malloc(n*sizeof(int));
+endsnippet
+
+snippet strtok
+//buffer string to keep original str
+char* str[200];
+strcpy(str,string);
+char* w = strtok(str, " ");
+while (w != NULL) {
+	printf(" % s\n", w);
+	w = strtok(NULL, " ");
+}
+endsnippet
+
+snippet charmap
+int a[26]={0};
+for (int i=0; i<strlen(str); i++)
+	a[str[i]-'a']++;
+endsnippet
+
+snippet knapsack
+int knapsack(int W, int n, in wt[n], int val[n]) {
+	int i, w;
+	int K[n + 1][W + 1];
+
+	for (i = 0; i <= n; i++) {
+		for (w = 0; w <= W; w++) {
+			if (i == 0 || w == 0)
+				K[i][w] = 0;
+			else if (wt[i - 1] <= w)
+			K[i][w] = max(val[i - 1] + K[i - 1][w - (int)wt[i - 1]], K[i - 1][w]);
+		else
+			K[i][w] = K[i - 1][w];
+	}
+	}
+
+	return K[n][W];
+}
+endsnippet
+
+snippet ph
+printf("hello\n");
+endsnippet
+
+snippet pi
+printf("i=%d\n",i);
+endsnippet
+
+snippet pc
+printf("char=%c\n",char);
+endsnippet
+
+snippet ps
+printf("str=%s\n",str);
+endsnippet
+
